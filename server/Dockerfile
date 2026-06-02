@@ -1,0 +1,20 @@
+# 🔥 BASE IMAGE
+FROM node:22
+
+# 🔥 WORKING DIRECTORY
+WORKDIR /app
+
+# 🔥 COPY PACKAGE FILES
+COPY package*.json ./
+
+# 🔥 INSTALL DEPENDENCIES
+RUN npm install
+
+# 🔥 COPY ALL FILES
+COPY . .
+
+# 🔥 EXPOSE PORT
+EXPOSE 5000
+
+# 🔥 START SERVER
+CMD ["npm", "run", "server"]
