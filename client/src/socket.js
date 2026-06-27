@@ -1,8 +1,5 @@
-import { io }
-from "socket.io-client";
+import { io } from "socket.io-client";
 
-const socket = io(
-  "http://54.90.194.227:5000"
-);
+const socket = io("https://devflow-backend-b1ww.onrender.com");
 
 export default socket;
