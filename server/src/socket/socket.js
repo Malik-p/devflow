@@ -8,8 +8,9 @@ const onlineUsers = {};
 export const initSocket = (server) => {
   io = new Server(server, {
     cors: {
-      origin: "http://localhost:5173",
+      origin: ["http://localhost:5173", "https://YOUR_VERCEL_URL.vercel.app"],
       methods: ["GET", "POST"],
+      credentials: true,
     },
   });
 
